@@ -5,6 +5,8 @@ provider "kubernetes" {
 
 provider "aws" {
   region = var.region
+  version = "~> 5.0"
+
 }
 
 data "aws_availability_zones" "available" {}
