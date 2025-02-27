@@ -30,7 +30,7 @@ jobs:
         working-directory: ./terraform
     steps:
       - name: Checkout source code
-        uses: action/checkout@v4
+        uses: actions/checkout@v4
       - name: SETUp Terraform with speficifid version on the runner
         uses: hasicorp/setup-terraform@v2
       - name: Terraform init
