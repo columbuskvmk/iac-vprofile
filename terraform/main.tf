@@ -1,16 +1,18 @@
-provider "kubernetes" {
-  host                   = module.eks.cluster_endpoint
-  cluster_ca_certificate = base64decode(module.eks.cluster_certificate_authority_data)
-}
-
 provider "aws" {
-  region = var.region
+  access_key = "AKIAVKHDBVMQRBA5PJFK"
+  secret_key = "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"
+  region = "ap-south-1"
 }
 
-data "aws_availability_zones" "available" {}
-
-locals {
-  cluster_name = var.clusterName
+resource "aws_dynamodb_table" "my_first_table" {
+  name        = "${var.table_name}"
+  billing_mode = "${var.table_billing_mode}"
+  hash_key       = "employee-id"
+  attribute {
+    name = "employee-id"
+    type = "S"
+  }
+  tags = {
+    environment       = "${var.environment}"
+  }
 }
-
-##
