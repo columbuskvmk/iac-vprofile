@@ -2,8 +2,8 @@
 
 ## creation of dynamo DB 
 
-## Tools required
-Terraform version 1.6.3
+
+
 
 ### Steps
 * terraform init
