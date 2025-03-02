@@ -7,7 +7,7 @@
 
 variable "table_name" {
   description = "Dynamodb table name (space is not allowed)"
-  default = "my-first-test-table-state-file"
+  default = "my-first-test-table-state-file-1"
 }
 
 variable "table_billing_mode" {
