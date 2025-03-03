@@ -16,3 +16,5 @@ resource "aws_dynamodb_table" "my_first_table" {
     environment       = "${var.environment}"
   }
 }
+
+#
